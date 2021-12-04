@@ -1,0 +1,22 @@
+﻿@model finalaspphone.Models.Persona
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Bienvenido @Model.nombre</h2>
+
+@{
+    Html.RenderAction("Telefonos", "Login");
+}
+
+<div class="row">
+    <div class="col-md-2">
+        <a class="btn btn-default" href="~/Telefono/Agregar" role="button">Agregar nuevo telefono</a>
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-default" href="~/Login/Cerrar" role="button">Cerrar sesion</a>
+    </div>
+</div>
+

@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Enviar Mensaje";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Enviar Mensaje</h2>
+
+<div class="row">
+    <div class="text-danger">
+        @ViewBag.Error
+    </div>
+    <form action="@Url.Content("~/Mensaje/Enviar")" method="post">
+        <div class="form-group col">
+            <label>Remitente</label><br />
+            <input type="hidden" value="@ViewBag.codRemitente" name="codRemitente"/>
+            @ViewBag.remitente
+        </div>
+        <div class="form-group col">
+            <label>Destinatario </label><br />
+            @Html.DropDownList("destinatario")
+        </div>
+        <div class="form-group col">
+            <label>Mensaje </label><br />
+            <input type="text" class="form-control" name="mensaje" required />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Enviar" class="btn btn-success" />
+            <a href="~/Login/Index" class="btn btn-danger">Cancelar</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,83 @@
+﻿@model finalaspphone.Models.Persona
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Persona</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nroTarjeta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nroTarjeta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaVencimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaVencimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.codSeguridad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codSeguridad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pass)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cedula }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

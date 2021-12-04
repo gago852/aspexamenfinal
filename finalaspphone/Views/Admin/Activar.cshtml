@@ -1,0 +1,35 @@
+﻿@model IEnumerable<finalaspphone.Models.Alta>
+
+@{
+    ViewBag.Title = "Lista de activar telefonos";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Lista para activar telefonos nuevos</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cedula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefono)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cedula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefono)
+            </td>
+            <td>
+                @Html.ActionLink("Activar", "Activartear", new { cedula = item.cedula, telefono = item.telefono })
+            </td>
+        </tr>
+    }
+
+</table>

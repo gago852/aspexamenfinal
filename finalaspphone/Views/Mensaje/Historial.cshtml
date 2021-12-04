@@ -1,0 +1,44 @@
+﻿@model IEnumerable<finalaspphone.Models.Mensaje>
+
+@{
+    ViewBag.Title = "Historial";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Historial</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.remitente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.destinatario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contenido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.remitente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.destinatario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contenido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha)
+        </td>
+    </tr>
+}
+
+</table>

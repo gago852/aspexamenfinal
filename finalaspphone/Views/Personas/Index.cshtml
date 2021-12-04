@@ -1,0 +1,65 @@
+﻿@model IEnumerable<finalaspphone.Models.Persona>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cedula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nroTarjeta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaVencimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.correo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.cedula)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.nombre)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.apellido)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.direccion)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.nroTarjeta)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.fechaVencimiento)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.correo)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.cedula })
+    </td>
+</tr>
+}
+
+</table>

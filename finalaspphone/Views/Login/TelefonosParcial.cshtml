@@ -1,0 +1,45 @@
+﻿@model IEnumerable<finalaspphone.Models.Telefono>
+
+<table class="table">
+    <tr>
+        <th>
+            <label>Numero Telefonico</label>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.desvio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.saldo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nroTelefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.desvio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.saldo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.estado)
+            </td>
+            <td>
+                @Html.ActionLink("Recargar saldo", "Recargar", "Telefono", new { telefono = item.codTelefono }, null) |
+                @Html.ActionLink("Desviar", "Desviar", "Telefono", new { telefono = item.codTelefono }, null) |
+                @Html.ActionLink("Encender/Apagar", "Prender", "Telefono", new { telefono = item.codTelefono }, null) |
+                @Html.ActionLink("Enviar Mensaje", "EnviarMensaje", "Mensaje", new { telefono = item.codTelefono }, null) |
+                @Html.ActionLink("Historial", "Historial", "Mensaje", new { telefono = item.codTelefono }, null)|
+                @Html.ActionLink("Borrar", "Bajar", "Telefono", new { telefono = item.nroTelefono }, null)
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,30 @@
+﻿@model finalaspphone.Models.Admin
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index admin</h2>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-1">
+                <a class="btn btn-default" href="~/Admin/Activar" role="button">Activar</a>
+            </div>
+            <div class="col-md-1">
+                <a class="btn btn-default" href="~/Admin/Bajar" role="button">Dar de baja</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                <a class="btn btn-default" href="~/Personas/Index" role="button">Usuarios</a>
+            </div>
+            <div class="col-md-1">
+                <a class="btn btn-default" href="~/Admin/Cerrar" role="button">Cerrar sesion</a>
+            </div>
+        </div>
+    </div>
+</div>
+
